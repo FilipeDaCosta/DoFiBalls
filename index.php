@@ -30,20 +30,23 @@
     <div class="container">
       <div class="header">
         <nav class="navbar">
-          <div>
-            <a href="#"
-              ><img src="img/DoFi_Balls_Logo.png" alt="DoFi Balls"
-            /></a>
-          </div>
-          <ul class="nav-list">
-              <li><a href="#">Home</a></li>
-            <li><a href="#products">Products</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li>
-              <a href=""><i class="fa fa-shopping-cart"></i> Cart</a>
-            </li>
-          </ul>
+            <div>
+                <a href="#"><img src="img/DoFi_Balls_Logo.png" alt="DoFi Balls"
+                    /></a>
+            </div>
+            <ul class="nav-list">
+                <li><a href="#">Home</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li id="cart"><i class="fa fa-shopping-cart"></i> Cart</li>
+                <div id="modal-container">
+                    <div class="modal">
+                        <ul id="buyItems"></ul>
+                        <button id="close">Close</button>
+                    </div>
+                </div>
+            </ul>
         </nav>
       </div>
       <div class="display-text">Display-Text</div>
@@ -119,8 +122,9 @@
       </div>
       <div class="footer">
         <p>© 2022 DoFi Balls. All rights reserved.</p>
-      </div>
     </div>
-    <script src="js/script.js" type="text/javascript"></script>
-  </body>
+</div>
+<script src="js/script.js" type="text/javascript"></script>
+<script src="js/shoppingCart.js"></script>
+</body>
 </html>
