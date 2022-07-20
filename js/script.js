@@ -20,7 +20,6 @@ window.onload = function (){
         }
     }
     pos.forEach ((object) => {
-        let box = new Box(object.box_id, object.box_pos_x, object.box_pos_y, object.box_pos_z, object.article_id)
-        boxList.push(box)
+        console.log(object.box_id + " " + object.box_pos_x + " " + object.box_pos_y + " " + object.box_pos_z + " " + object.article_id)
     });
 }

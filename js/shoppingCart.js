@@ -14,7 +14,7 @@ close.addEventListener('click', () =>{
 
 const productsInCart = [];
 const cartParentElement = document.querySelector('#buyItems');
-const cartSumPrice = document.querySelector('#sum-prices');
+// const cartSumPrice = document.querySelector('#sum-prices');
 
 const products = document.querySelectorAll('.item-a');
 
@@ -44,21 +44,17 @@ const updateShoppingCartHTML = function () {  // 3
 					</div>
 				</li> <br>`
 		});
-		console.log(result);
 		cartParentElement.innerHTML = result.join(' ');
 		// document.querySelector('.checkout').classList.remove('hidden');
-		cartSumPrice.innerHTML = '$' + countTheSumPrice();
-
+		// cartSumPrice.innerHTML = '$' + countTheSumPrice();
 	}
 	else {
 		// document.querySelector('.checkout').classList.add('hidden');
 		cartParentElement.innerHTML = '<h6 class="empty">Your shopping cart is empty</h6>';
-		cartSumPrice.innerHTML = '';
+		// cartSumPrice.innerHTML = '';
 	}
 }
 
-
-console.log(productsInCart.length);
 const updateProductsInCart = (product) => {
 	// console.log(product);
 	for (let i = 0; i < productsInCart.length; i++) {
