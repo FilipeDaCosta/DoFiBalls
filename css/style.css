@@ -242,12 +242,15 @@ a {
   display: none;
 }
 #buyItems {
-  margin-left: -70px;
+  margin-left: -20px;
 }
 #buyItems .buyItem {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+  align-content: stretch;
+  flex-wrap: wrap;
+  flex-direction: row;
 }
 #buyItems .empty {
   text-align: center;
