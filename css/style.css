@@ -228,6 +228,16 @@ a {
   cursor: pointer;
 }
 
+#order {
+  background-color: green;
+  color: black;
+  border: 1px solid black;
+  text-align: center;
+  padding: 10px 15px;
+  margin: 10px 40px;
+  cursor: pointer;
+}
+
 .hidden {
   display: none;
 }

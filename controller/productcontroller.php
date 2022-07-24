@@ -22,7 +22,6 @@ foreach ($balls as $key => $value) {
     echo "<li class='item-a'>";
     echo    "<div class='box'>";
     echo        "<p class='ball'>Ball $name</p>";
-    echo        "<p class='priceValue'>50</p>";
     echo        "<img src=$value class='model' />";
     echo        "<div class='details'>";
     echo            "<button class='item-button addToCart' data-product-id=$counter> ADD TO CART</button>";

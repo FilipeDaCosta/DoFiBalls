@@ -38,6 +38,7 @@
                     <div class="modal">
                         <ul id="buyItems"></ul>
                         <button id="close">Close</button>
+                        <button id="order">Order</button>
                     </div>
                 </div>
             </ul>
