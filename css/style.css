@@ -231,6 +231,17 @@ a {
 .hidden {
   display: none;
 }
-.buyItem {
+#buyItems {
+  margin-left: -70px;
+}
+#buyItems .buyItem {
   display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#buyItems .empty {
+  text-align: center;
+}
+.product-name {
+  margin: 0 40px;
 }
