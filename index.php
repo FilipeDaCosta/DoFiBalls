@@ -11,10 +11,12 @@ include_once 'config/config.php';
         <!--Style-->
         <link rel="stylesheet" type="text/css" href="/css/modern-normalize.css">
         <link rel="stylesheet" type="text/css" href="css/style.css"/>
-        <link rel="stylesheet" type="text/css" href="css/lightslider.css"/>
+<!--        <link rel="stylesheet" type="text/css" href="css/lightslider.css"/>-->
+        <link rel="stylesheet" type="text/css" href="css/slider.css"/>
         <!--JS-->
         <script type="text/javascript" src="js/JQuery3.3.1.js"></script>
-        <script type="text/javascript" src="js/lightslider.js"></script>
+<!--        <script type="text/javascript" src="js/lightslider.js"></script>-->
+        <script type="text/javascript" src="js/slider.js"></script>
         <!--Font-->
         <link rel="preconnect" href="https://fonts.googleapis.com"/>
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
@@ -60,9 +62,31 @@ include_once 'config/config.php';
                 }
                 ?>
             </div>
+
+<!--            <section class="product">-->
+<!--                <h2 class="product-category">best selling</h2>-->
+<!--                <button class="pre-btn"><img src="img/arrow.png" alt=""></button>-->
+<!--                <button class="nxt-btn"><img src="img/arrow.png" alt=""></button>-->
+<!--                <div class="product-container">-->
+<!--                    <div class="product-card">-->
+<!--                        <div class="product-image">-->
+<!--                            <span class="discount-tag">50% off</span>-->
+<!--                            <img src="img/DoFi_Ball_Singel_Rot.png" class="product-thumb" alt="">-->
+<!--                            <button class="card-btn">add to wishlist</button>-->
+<!--                        </div>-->
+<!--                        <div class="product-info">-->
+<!--                            <h2 class="product-brand">brand</h2>-->
+<!--                            <p class="product-short-description">a short line about the cloth..</p>-->
+<!--                            <span class="price">$20</span><span class="actual-price">$40</span>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </section>-->
+
             <div id="footer">
                 <p>Copyright &copy; 2017 TicSys, <?php echo date("d.m.Y H:i:s"); ?></p>
             </div>
         </div>
+        <script type="text/javascript" src="js/slider.js"></script>
     </body>
 </html>
