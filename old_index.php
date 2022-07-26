@@ -49,7 +49,7 @@
         <!--Slider-->
         <ul id="autoWidth" class="cs-hidden">
             <?php
-            include_once 'controller/productcontroller.php'
+            include_once 'controller/shopcontroller.php';
             ?>
         </ul>
     </div>
