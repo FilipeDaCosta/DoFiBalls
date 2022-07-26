@@ -1,13 +1,5 @@
 <?php
 
-//$balls = array (
-//    array("ballRed", "img/DoFi_Ball_Singel_Rot.png", 1),
-//    array("ballGreen", "img/DoFi_Ball_Singel_Grün.png", 2),
-//    array("ballBlue", "img/DoFi_Ball_Singel_Blau.png", 3),
-//    array("ballBlack", "img/DoFi_Ball_Singel_Schwarz.png", 4),
-//    array("ballYellow", "img/DoFi_Ball_Singel_Gelb.png", 5)
-//);
-
 $balls=array(
     "ballRed" => "img/DoFi_Ball_Singel_Rot.png",
     "ballGreen" => "img/DoFi_Ball_Singel_Grün.png",
