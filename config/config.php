@@ -3,7 +3,6 @@
 define('URI_HOME', '/home');
 define('URI_SHOP', '/shop');
 define('URI_CONTACT', '/contact');
-define('URI_CART', '/cart');
 
 
 /**
@@ -15,7 +14,6 @@ function getMenu()
         URI_HOME => 'Home',
         URI_SHOP => 'Shop',
         URI_CONTACT => 'Contact',
-        URI_CART => 'Cart'
     );
 }
 

@@ -10,7 +10,4 @@ switch (getCurrentURI()) {
     case URI_CONTACT:
         include_once 'controller/contactcontroller.php';
         break;
-    case URI_CART:
-        echo "Cart";
-        break;
 }

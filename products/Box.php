@@ -9,12 +9,6 @@ class Box
     private int $articleId;
     private int $orderId;
 
-    private static int $redBoxes = 0;
-    private static int $greenBoxes = 0;
-    private static int $blueBoxes = 0;
-    private static int $orangeBoxes = 0;
-    private static int $yellowBoxes = 0;
-
     private static array $boxList = array();
 
     public function __construct($boxId, $posX, $posY, $posZ, $articleId, $orderId)
@@ -85,93 +79,12 @@ class Box
     }
 
     /**
-     * @param array $boxList
+     * @param Box $box
      */
     public static function setBoxList(Box $box): void
     {
         self::$boxList[] = $box;
     }
-
-    /**
-     * @return int
-     */
-    public static function getRedBoxes(): int
-    {
-        return self::$redBoxes;
-    }
-
-    /**
-     * @param int $redBoxes
-     */
-    public static function setRedBoxes(): void
-    {
-        self::$redBoxes++;
-    }
-
-    /**
-     * @return int
-     */
-    public static function getGreenBoxes(): int
-    {
-        return self::$greenBoxes;
-    }
-
-    /**
-     * @param int $greenBoxes
-     */
-    public static function setGreenBoxes(): void
-    {
-        self::$greenBoxes++;
-    }
-
-    /**
-     * @return int
-     */
-    public static function getBlueBoxes(): int
-    {
-        return self::$blueBoxes;
-    }
-
-    /**
-     * @param int $blueBoxes
-     */
-    public static function setBlueBoxes(): void
-    {
-        self::$blueBoxes++;
-    }
-
-    /**
-     * @return int
-     */
-    public static function getOrangeBoxes(): int
-    {
-        return self::$orangeBoxes;
-    }
-
-    /**
-     * @param int $orangeBoxes
-     */
-    public static function setOrangeBoxes(): void
-    {
-        self::$orangeBoxes++;
-    }
-
-    /**
-     * @return int
-     */
-    public static function getYellowBoxes(): int
-    {
-        return self::$yellowBoxes;
-    }
-
-    /**
-     * @param int $yellowBoxes
-     */
-    public static function setYellowBoxes(): void
-    {
-        self::$yellowBoxes++;
-    }
-
 
 
 }
