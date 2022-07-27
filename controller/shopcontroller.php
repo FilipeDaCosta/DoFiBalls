@@ -17,14 +17,11 @@ foreach ($balls as $key => $value) {
     $name = substr($key, 4, strlen($key) - 4);
     echo '<div class="product-card">';
     echo '<div class="product-image">';
-    echo '<span class="discount-tag">50% off</span>';
     echo "<img src=$value class='product-thumb' alt=''>";
-    echo '<button class="card-btn">add to wishlist</button>';
+    echo '<button class="card-btn">Add To Cart</button>';
     echo '</div>';
     echo '<div class="product-info">';
-    echo "<h2 class='product-brand'>$key</h2>";
-    echo "<p cecho lass='product-short-description'>Bla</p>";
-    echo '<span class="price">$20</span><span class="actual-price">$40</span>';
+    echo "<h2 class='product-brand'>$name Ball</h2>";
     echo '</div>';
     echo '</div>';
     $counter++;
