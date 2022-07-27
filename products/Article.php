@@ -19,6 +19,38 @@ class Article
     }
 
     /**
+     * @return int
+     */
+    public function getArticleId(): int
+    {
+        return $this->articleId;
+    }
+
+    /**
+     * @return string
+     */
+    public function getDescription(): string
+    {
+        return $this->description;
+    }
+
+    /**
+     * @return int
+     */
+    public function getColorId(): int
+    {
+        return $this->colorId;
+    }
+
+    /**
+     * @return string
+     */
+    public function getSrc(): string
+    {
+        return $this->src;
+    }
+
+    /**
      * @return array
      */
     public static function getArticleList(): array

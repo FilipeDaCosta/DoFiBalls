@@ -29,7 +29,7 @@
 .product-card {
     flex: 0 0 auto;
     width: 250px;
-    height: 420px;
+    height: 480px;
     margin-right: 40px;
 }
 
@@ -87,6 +87,7 @@
     width: 100%;
     height: 20px;
     line-height: 20px;
+    text-align: center;
     overflow: hidden;
     opacity: 0.5;
     text-transform: capitalize;

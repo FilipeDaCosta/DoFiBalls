@@ -9,9 +9,15 @@ class Box
     private int $articleId;
     private int $orderId;
 
+    private static int $redBoxes = 0;
+    private static int $greenBoxes = 0;
+    private static int $blueBoxes = 0;
+    private static int $orangeBoxes = 0;
+    private static int $yellowBoxes = 0;
+
     private static array $boxList = array();
 
-    public function  __construct($boxId, $posX, $posY, $posZ, $articleId, $orderId)
+    public function __construct($boxId, $posX, $posY, $posZ, $articleId, $orderId)
     {
         $this->boxId = $boxId;
         $this->posX = $posX;
@@ -20,6 +26,54 @@ class Box
         $this->articleId = $articleId;
         $this->orderId = $orderId;
         self::setBoxList($this);
+    }
+
+    /**
+     * @return int
+     */
+    public function getBoxId(): int
+    {
+        return $this->boxId;
+    }
+
+    /**
+     * @return int
+     */
+    public function getPosX(): int
+    {
+        return $this->posX;
+    }
+
+    /**
+     * @return int
+     */
+    public function getPosY(): int
+    {
+        return $this->posY;
+    }
+
+    /**
+     * @return int
+     */
+    public function getPosZ(): int
+    {
+        return $this->posZ;
+    }
+
+    /**
+     * @return int
+     */
+    public function getArticleId(): int
+    {
+        return $this->articleId;
+    }
+
+    /**
+     * @return int
+     */
+    public function getOrderId(): int
+    {
+        return $this->orderId;
     }
 
     /**
@@ -36,6 +90,86 @@ class Box
     public static function setBoxList(Box $box): void
     {
         self::$boxList[] = $box;
+    }
+
+    /**
+     * @return int
+     */
+    public static function getRedBoxes(): int
+    {
+        return self::$redBoxes;
+    }
+
+    /**
+     * @param int $redBoxes
+     */
+    public static function setRedBoxes(): void
+    {
+        self::$redBoxes++;
+    }
+
+    /**
+     * @return int
+     */
+    public static function getGreenBoxes(): int
+    {
+        return self::$greenBoxes;
+    }
+
+    /**
+     * @param int $greenBoxes
+     */
+    public static function setGreenBoxes(): void
+    {
+        self::$greenBoxes++;
+    }
+
+    /**
+     * @return int
+     */
+    public static function getBlueBoxes(): int
+    {
+        return self::$blueBoxes;
+    }
+
+    /**
+     * @param int $blueBoxes
+     */
+    public static function setBlueBoxes(): void
+    {
+        self::$blueBoxes++;
+    }
+
+    /**
+     * @return int
+     */
+    public static function getOrangeBoxes(): int
+    {
+        return self::$orangeBoxes;
+    }
+
+    /**
+     * @param int $orangeBoxes
+     */
+    public static function setOrangeBoxes(): void
+    {
+        self::$orangeBoxes++;
+    }
+
+    /**
+     * @return int
+     */
+    public static function getYellowBoxes(): int
+    {
+        return self::$yellowBoxes;
+    }
+
+    /**
+     * @param int $yellowBoxes
+     */
+    public static function setYellowBoxes(): void
+    {
+        self::$yellowBoxes++;
     }
 
 
