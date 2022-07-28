@@ -20,23 +20,26 @@ foreach ($allArticles as $article){
 }
 
 foreach ($allBoxes as $box){
-    $newBox = new Box($box->box_id, $box->box_pos_x, $box->box_pos_y, $box->box_pos_z, $box->article_id, $box->order_id);
-    switch ($newBox->getArticleId()){
-        case 1:
-            array_push($redBoxes, $newBox);
-            break;
-        case 2:
-            array_push($greenBoxes, $newBox);
-            break;
-        case 3:
-            array_push($blueBoxes, $newBox);
-            break;
-        case 4:
-            array_push($orangeBoxes, $newBox);
-            break;
-        case 5:
-            array_push($yellowBoxes, $newBox);
-            break;
+    if(is_null($box->order_id)){
+        $box->order_id = 0;
+        $newBox = new Box($box->box_id, $box->box_pos_x, $box->box_pos_y, $box->box_pos_z, $box->article_id, $box->order_id);
+        switch ($newBox->getArticleId()){
+            case 1:
+                array_push($redBoxes, $newBox);
+                break;
+            case 2:
+                array_push($greenBoxes, $newBox);
+                break;
+            case 3:
+                array_push($blueBoxes, $newBox);
+                break;
+            case 4:
+                array_push($orangeBoxes, $newBox);
+                break;
+            case 5:
+                array_push($yellowBoxes, $newBox);
+                break;
+        }
     }
 }
 

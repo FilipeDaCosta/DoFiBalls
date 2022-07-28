@@ -1,10 +1,11 @@
-html {
-    scroll-behavior: smooth;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
 }
 
 body {
-    margin: 30px auto 0;
-    font-family: "Roboto", sans-serif;
     background: #61b9f0;
 }
 
@@ -13,73 +14,100 @@ body {
     margin: 30px auto 0;
 }
 
-#header {
-    padding: 10px 10px 10px 60px;
-    background-color: #f0ce54;
-    border-bottom: 10px solid #61b9f0;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-}
-
-#menu {
-    background-color: #f0ce54;
-    padding: 10px 10px 10px 0;
-    height: 70px;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-}
-
-#menu a {
-    font-size: 20px;
-    color: #000000;
-    text-decoration: none;
-    padding: 2px 2px 2px 2px;
-}
-
-#menu a.selected, #menu a:hover {
-    background-color: #61b9f0;
-    border-radius: 5px;
-}
-
-#menu ul {
+header {
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    list-style: none;
+    padding: 20px 5%;
+    background-color: #f0ce54;
+    border-radius: 10px;
 }
 
-#menu ul li {
-    float: left;
-    padding-right: 40px;
-}
-
-#menu ul li:first-child {
-    padding-left: 26px;
-}
-
-#menu ul li:last-child {
-    right: 0;
-    position: absolute;
-}
-
-#cart-button {
+#dofi-logo {
+    cursor: pointer;
     height: 7%;
     width: 7%;
+    float: left;
 }
 
-#cart-button:hover{
+#cart-div {
+    width: 5%;
+    cursor: pointer;
+    float: right;
+    display:flex;
+    justify-content:flex-end;
+    align-items:center;
+}
+
+#cart-logo {
+    cursor: pointer;
+    height: 60%;
+    width: 60%;
+    float: right;
+}
+
+#cart-logo:hover {
     opacity: 0.2;
 }
 
-#cart-button:active {
-    opacity: 100%;
+#cart-logo:active {
+    opacity: 1;
+}
+
+#cart-counter {
+    float: right;
+    padding-left: 5px;
+    font-size: 1.5em;
+}
+
+#nav {
+    list-style: none;
+
+}
+
+#nav li {
+    display: inline-block;
+    padding: 0px 20px;
+    text-align: center;
+}
+
+#nav li a {
+    font-size: 1.2em;
+    color: black;
+    transition: all 0.3s ease 0s;
+    text-decoration: none;
+}
+
+#nav li a.selected, #nav li a:hover {
+    background-color: #61b9f0;
+    border-radius: 10px;
+    padding: 3px;
 }
 
 #hometext {
+    padding-top: 10px;
+    padding-bottom: 10px;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
-    width: 90%;
+    width: 80%;
 }
+
+#hometext p{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#contact-div {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+}
+
 #map-google {
     width: 100%;
     height: 500px;
@@ -88,10 +116,7 @@ body {
     border-radius: 10px;
 }
 
-#contact-div {
-    width: 100%;
-    display: flex;
-}
+
 
 #map {
     width: 50%;
@@ -99,8 +124,7 @@ body {
 }
 
 #form-div{
-    width: 50%;
-
+    border: 1px solid black;
 }
 #contact-form{
     padding-top: 10px;
@@ -116,6 +140,8 @@ body {
 }
 
 #footer {
+    margin-right: auto;
+    margin-left: auto;
     background-color: #f0ce54;
     padding: 10px 10px 10px 60px;
     border-radius: 10px;

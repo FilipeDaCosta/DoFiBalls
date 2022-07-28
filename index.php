@@ -6,7 +6,7 @@ include_once 'config/config.php';
     <head>
         <meta charset="utf-8"/>
         <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
         <title>DoFi Balls</title>
         <!--Style-->
         <link rel="stylesheet" type="text/css" href="/css/modern-normalize.css">
@@ -20,21 +20,21 @@ include_once 'config/config.php';
         <link rel="shortcut icon" href="img/DoFi_Balls_Logo_icon.png">
     </head>
     <body>
-        <div id="container">
-            <div id="header">
-                <div id="logo">
-                    <a href="/home">
-                        <img src="img/DoFi_Balls_Logo.png" alt="DoFi Balls Logo" width="295" height="100" />
-                    </a>
-                </div>
-            </div>
-            <div id="menu">
-                <ul>
+        <header>
+            <img id="dofi-logo" src="img/DoFi_Balls_Logo.png" alt="DoFi Balls Logo" />
+            <nav>
+                <ul id="nav">
                     <?php
                     include_once 'controller/menucontroller.php'
                     ?>
                 </ul>
+            </nav>
+            <div id="cart-div">
+                <img id="cart-logo" src="img/cart.png" alt="Cart Logo"/>
+                <p id="cart-counter">0</p>
             </div>
+        </header>
+        <div id="container">
             <div id="content">
                 <?php
                 include_once 'controller/controller.php'
