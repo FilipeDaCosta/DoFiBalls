@@ -18,7 +18,6 @@ header {
     margin-top: 10px;
     margin-left: auto;
     margin-right: auto;
-    width: 70%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -34,13 +33,62 @@ header {
     float: left;
 }
 
-#cart-div {
+#header-cart-div {
     width: 5%;
     cursor: pointer;
     float: right;
-    display:flex;
-    justify-content:flex-end;
-    align-items:center;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#cart-div {
+    padding-top: 10px;
+    text-align: center;
+}
+
+.cart-item-div {
+    text-align: center;
+    border-bottom: solid 5px black;
+}
+
+.item-name {
+    font-size: 1.5em;
+    padding-bottom: 5px;
+
+}
+
+.item-ammount {
+    font-size: 1.2em;
+    padding-bottom: 5px;
+    font-weight: bold;
+}
+
+.minus-button {
+    padding-right: 5px;
+    width: 8%;
+    height: 8%;
+}
+
+.plus-button {
+    padding-left: 5px;
+    width: 8%;
+    height: 8%;
+}
+
+.bin-button {
+    padding-bottom: 10px;
+    width: 8%;
+    height: 8%;
+}
+
+#order-button {
+    margin-top: 10px;
+    width: 80px;
+    height: 25px;
+    border-radius: 5px;
+    border: none;
+    background-color: #f0ce54;
 }
 
 #cart-logo {
@@ -64,9 +112,16 @@ header {
     font-size: 1.5em;
 }
 
+#cart-div {
+    border-radius: 10px;
+    background-color: white;
+    width: 15%;
+    float: right;
+    visibility: hidden;
+}
+
 #nav {
     list-style: none;
-
 }
 
 #nav li {
@@ -97,7 +152,7 @@ header {
     width: 80%;
 }
 
-#hometext p{
+#hometext p {
     padding-top: 10px;
     padding-bottom: 10px;
 }
@@ -116,22 +171,21 @@ header {
     border-radius: 10px;
 }
 
-
-
 #map {
     width: 50%;
     display: flex;
 }
 
-#form-div{
+#form-div {
     border: 1px solid black;
 }
-#contact-form{
+
+#contact-form {
     padding-top: 10px;
     padding-left: 40px;
 }
 
-#contact-form input{
+#contact-form input {
     margin-bottom: 8px;
 }
 
@@ -145,4 +199,9 @@ header {
     background-color: #f0ce54;
     padding: 10px 10px 10px 60px;
     border-radius: 10px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+

@@ -1,9 +1,7 @@
 <?php
 
 $articles = Article::getArticleList();
-$boxes = Box::getBoxList();
 
-echo '<script src="js/script.js"></script>';
 echo '<section class="product">';
 echo '<button class="pre-btn"><img src="img/arrow.png" alt=""></button>';
 echo '<button class="nxt-btn"><img src="img/arrow.png" alt=""></button>';
@@ -16,7 +14,7 @@ foreach ($articles as $article) {
     echo '<div class="product-card">';
     echo '<div class="product-image">';
     echo "<img src='$src' class='product-thumb' alt=''>";
-    echo '<button class="card-btn" onclick="updateCart(\'' . $id . '\')">Add To Cart</button>';
+    echo "<button class='card-btn' onclick='addToCart($id, $ammount)'>Add To Cart</button>";
     echo '</div>';
     echo '<div class="product-info">';
     echo "<h2 class='product-brand'>$description</h2>";
