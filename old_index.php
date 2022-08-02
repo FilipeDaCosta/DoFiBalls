@@ -118,7 +118,7 @@
         <p>© 2022 DoFi Balls. All rights reserved.</p>
     </div>
 </div>
-<script src="js/script.js" type="text/javascript"></script>
+<script src="js/cart.js" type="text/javascript"></script>
 <script src="js/shoppingCart.js"></script>
 </body>
 </html>

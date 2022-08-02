@@ -45,11 +45,18 @@ header {
 #cart-div {
     padding-top: 10px;
     text-align: center;
+    background-color: #f0ce54;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+    width: 15%;
+    float: right;
+    visibility: hidden;
+    border-left: 1px solid black;
 }
 
 .cart-item-div {
     text-align: center;
-    border-bottom: solid 5px black;
+    border-bottom: 1px solid black;
 }
 
 .item-name {
@@ -84,11 +91,20 @@ header {
 
 #order-button {
     margin-top: 10px;
-    width: 80px;
-    height: 25px;
+    width: 90px;
+    height: 30px;
     border-radius: 5px;
     border: none;
-    background-color: #f0ce54;
+    background-color: #61b9f0;
+    cursor: pointer;
+}
+
+#order-button:hover {
+    opacity: 0.5;
+}
+
+#order-button:active {
+    opacity: 1;
 }
 
 #cart-logo {
@@ -110,14 +126,6 @@ header {
     float: right;
     padding-left: 5px;
     font-size: 1.5em;
-}
-
-#cart-div {
-    border-radius: 10px;
-    background-color: white;
-    width: 15%;
-    float: right;
-    visibility: hidden;
 }
 
 #nav {
