@@ -6,7 +6,7 @@ let itemsInCart = [{id: 1, ball: "Red Ball", ammount: 0, available: 0},
 
 function addToCart(id, available) {
     let cartCount = document.getElementById("cart-counter");
-    let $itemsInCartAmmount = 0;
+    let itemsInCartAmmount = 0;
     switch (id) {
         case 1:
             if (itemsInCart[0].ammount < available) {
@@ -50,9 +50,9 @@ function addToCart(id, available) {
             break;
     }
     itemsInCart.forEach((item) => {
-        $itemsInCartAmmount += item.ammount;
+        itemsInCartAmmount += item.ammount;
     });
-    cartCount.innerHTML = $itemsInCartAmmount;
+    cartCount.innerHTML = itemsInCartAmmount;
     addItemsToCart();
 }
 
@@ -88,8 +88,7 @@ function changeItemAmmount(option, itemId) {
             if (item.id == itemId) {
                 if (item.ammount < item.available) {
                     item.ammount++;
-                }
-                else {
+                } else {
                     alert("No more items available..");
                 }
             }
@@ -126,8 +125,6 @@ function showCart() {
     let node = document.getElementById("cart-div");
     node.style.backgroundColor = "#f0ce54";
     let footerPos = footer.getBoundingClientRect().y + footer.offsetHeight - 30;
-
-    console.log(node.style.visibility)
     if (node.style.visibility == 'visible') {
         footer.style.borderBottomRightRadius = "10px";
         footer.style.borderTopRightRadius = "10px";
@@ -144,12 +141,26 @@ function showCart() {
     }
 }
 
-function order(){
-    let xhr = new XMLHttpRequest();
-    let url = "http://rest.sa/recieveDataFromFrontEnd.php";
-    xhr.open("POST", url, true);
-    xhr.setRequestHeader("Content-Type", "application/json");
-    xhr.setRequestHeader("Access-Control-Allow-Origin","*")
-    let data = JSON.stringify(itemsInCart);
-    xhr.send(data);
+function order() {
+    let itemsInCartAmmount = 0;
+    let confirmMessage = "";
+    itemsInCart.forEach((item) => {
+        itemsInCartAmmount += item.ammount;
+    });
+    if (itemsInCartAmmount === 1) {
+        confirmMessage = "Do you really want to order 1 item?";
+    } else {
+        confirmMessage = "Do you really want to order " + itemsInCartAmmount + " items?";
+    }
+    if (confirm(confirmMessage)) {
+        let xhr = new XMLHttpRequest();
+        let url = "http://rest.sa/recieveDataFromFrontEnd.php";
+        xhr.open("POST", url, true);
+        xhr.setRequestHeader("Content-Type", "application/json");
+        xhr.setRequestHeader("Access-Control-Allow-Origin", "*");
+        let data = JSON.stringify(itemsInCart);
+        xhr.send(data);
+        alert("Order confirmed!");
+        location.reload();
+    }
 }
