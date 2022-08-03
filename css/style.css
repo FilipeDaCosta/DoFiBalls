@@ -27,8 +27,8 @@ header {
 }
 
 #dofi-logo {
-    height: 7%;
-    width: 7%;
+    height: 150%;
+    width: 150%;
     float: left;
 }
 
@@ -143,6 +143,10 @@ header {
     text-decoration: none;
 }
 
+#icon-link {
+    width: 5%;
+}
+
 #nav li a.selected, #nav li a:hover {
     background-color: #61b9f0;
     border-radius: 10px;
@@ -150,7 +154,7 @@ header {
 }
 
 #hometext {
-    padding-top: 10px;
+    padding-top: 30px;
     padding-bottom: 10px;
     text-align: center;
     margin-left: auto;

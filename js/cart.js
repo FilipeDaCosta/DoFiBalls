@@ -4,9 +4,11 @@ let itemsInCart = [{id: 1, ball: "Red Ball", ammount: 0, available: 0},
     {id: 4, ball: "Orange Ball", ammount: 0, available: 0},
     {id: 5, ball: "Yellow Ball", ammount: 0, available: 0}];
 
+let itemsInCartAmmount = 0;
+
+
 function addToCart(id, available) {
     let cartCount = document.getElementById("cart-counter");
-    let itemsInCartAmmount = 0;
     switch (id) {
         case 1:
             if (itemsInCart[0].ammount < available) {
@@ -164,3 +166,9 @@ function order() {
         location.reload();
     }
 }
+
+window.onbeforeunload = function() {
+    if (itemsInCartAmmount != 0) {
+        return "Data will be lost if you leave the page, are you sure?";
+    }
+};

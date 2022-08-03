@@ -4,7 +4,7 @@ echo '<div id="contact-div">';
 echo '<div id="map">';
 echo '<iframe 
         id="map-google" 
-        src="https://maps.google.com/maps?q=5452%20oberrohrdorf&t=&z=13&ie=UTF8&iwloc=&output=embed"
+        src="https://maps.google.com/maps?q=abb%20ts%20baden&t=&z=13&ie=UTF8&iwloc=&output=embed"
         allowfullscreen=""
         loading="lazy"
         referrerpolicy="no-referrer-when-downgrade">     
