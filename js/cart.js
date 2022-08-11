@@ -156,7 +156,7 @@ function order() {
     }
     if (confirm(confirmMessage)) {
         let xhr = new XMLHttpRequest();
-        let url = "http://rest.sa/recieveDataFromFrontEnd.php";
+        let url = "http://az-srv01-mysql-api.switzerlandnorth.cloudapp.azure.com/recieveDataFromFrontEnd.php";
         xhr.open("POST", url, true);
         xhr.setRequestHeader("Content-Type", "application/json");
         xhr.setRequestHeader("Access-Control-Allow-Origin", "*");
