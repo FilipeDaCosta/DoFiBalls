@@ -16,7 +16,6 @@ include_once 'config/config.php';
     <script type="text/javascript" src="js/getDataFromRest.js"></script>
     <script type="text/javascript" src="js/Box.js"></script>
     <script type="text/javascript" src="js/Article.js"></script>
-    <script type="text/javascript" src="js/test.js"></script>
     <script type="text/javascript" src="js/cart.js"></script>
     <!--Font-->
     <link rel="preconnect" href="https://fonts.googleapis.com"/>
