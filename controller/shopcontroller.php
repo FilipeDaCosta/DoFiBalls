@@ -7,8 +7,6 @@ echo '<button class="pre-btn"><img src="img/arrow.png" alt=""></button>';
 echo '<button class="nxt-btn"><img src="img/arrow.png" alt=""></button>';
 echo '<div class="product-container">';
 foreach ($articles as $article) {
-    echo "test";
-    echo $article;
     $ammount = count($article->getBoxes());
     $src = $article->getSrc();
     $description = $article->getDescription();
