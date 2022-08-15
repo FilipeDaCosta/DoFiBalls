@@ -52,6 +52,7 @@ function addToCart(id, available) {
             }
             break;
     }
+    itemsInCartAmmount = 0;
     itemsInCart.forEach((item) => {
         itemsInCartAmmount += item.ammount;
     });
