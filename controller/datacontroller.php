@@ -9,10 +9,10 @@ $blueBoxes = array();
 $orangeBoxes = array();
 $yellowBoxes = array();
 
-$allBoxes = file_get_contents('http://rest.sa/getAllBoxes.php');
+$allBoxes = file_get_contents('http://az-srv01-mysql-api.switzerlandnorth.cloudapp.azure.com/getAllBoxes.php');
 $allBoxes = json_decode($allBoxes);
 
-$allArticles = file_get_contents('http://rest.sa/getAllArticles.php');
+$allArticles = file_get_contents('http://az-srv01-mysql-api.switzerlandnorth.cloudapp.azure.com/getAllArticles.php');
 $allArticles = json_decode($allArticles);
 
 foreach ($allArticles as $article){

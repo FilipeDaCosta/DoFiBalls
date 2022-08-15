@@ -5,6 +5,7 @@ let itemsInCart = [{id: 1, ball: "Red Ball", ammount: 0, available: 0},
     {id: 5, ball: "Yellow Ball", ammount: 0, available: 0}];
 
 let itemsInCartAmmount = 0;
+let isOrder = false;
 
 
 function addToCart(id, available) {
@@ -51,6 +52,7 @@ function addToCart(id, available) {
             }
             break;
     }
+    itemsInCartAmmount = 0;
     itemsInCart.forEach((item) => {
         itemsInCartAmmount += item.ammount;
     });
@@ -156,19 +158,21 @@ function order() {
     }
     if (confirm(confirmMessage)) {
         let xhr = new XMLHttpRequest();
-        let url = "http://rest.sa/recieveDataFromFrontEnd.php";
+        let url = "http://az-srv01-mysql-api.switzerlandnorth.cloudapp.azure.com/recieveDataFromFrontEnd.php";
         xhr.open("POST", url, true);
         xhr.setRequestHeader("Content-Type", "application/json");
+        xhr.setRequestHeader("Access-Control-Allow-Headers", "*");
         xhr.setRequestHeader("Access-Control-Allow-Origin", "*");
         let data = JSON.stringify(itemsInCart);
         xhr.send(data);
         alert("Order confirmed!");
+        isOrder = true;
         location.reload();
     }
 }
 
 window.onbeforeunload = function() {
-    if (itemsInCartAmmount != 0) {
+    if (itemsInCartAmmount != 0 && !isOrder) {
         return "Data will be lost if you leave the page, are you sure?";
     }
 };

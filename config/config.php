@@ -23,6 +23,7 @@ function getMenu()
 function getCurrentURI()
 {
     $menu = getMenu();
+    $test = $_SERVER['REQUEST_URI'];
     if (array_key_exists($_SERVER['REQUEST_URI'], $menu)) {
         return $_SERVER['REQUEST_URI'];
     } else {
