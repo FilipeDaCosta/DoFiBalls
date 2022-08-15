@@ -164,7 +164,7 @@ function order() {
         let data = JSON.stringify(itemsInCart);
         xhr.send(data);
         alert("Order confirmed!");
-        // location.reload();
+        location.reload();
     }
 }
 

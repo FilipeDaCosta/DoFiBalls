@@ -1,8 +1,8 @@
 <?php
 
-define('URI_HOME', '/home');
-define('URI_SHOP', '/shop');
-define('URI_CONTACT', '/contact');
+define('URI_HOME', '/dofi-test/home');
+define('URI_SHOP', '/dofi-test/shop');
+define('URI_CONTACT', '/dofi-test/contact');
 
 
 /**
@@ -23,6 +23,7 @@ function getMenu()
 function getCurrentURI()
 {
     $menu = getMenu();
+    $test = $_SERVER['REQUEST_URI'];
     if (array_key_exists($_SERVER['REQUEST_URI'], $menu)) {
         return $_SERVER['REQUEST_URI'];
     } else {
