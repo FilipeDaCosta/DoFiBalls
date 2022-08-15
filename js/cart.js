@@ -5,6 +5,7 @@ let itemsInCart = [{id: 1, ball: "Red Ball", ammount: 0, available: 0},
     {id: 5, ball: "Yellow Ball", ammount: 0, available: 0}];
 
 let itemsInCartAmmount = 0;
+let isOrder = false;
 
 
 function addToCart(id, available) {
@@ -164,12 +165,13 @@ function order() {
         let data = JSON.stringify(itemsInCart);
         xhr.send(data);
         alert("Order confirmed!");
+        isOrder = true;
         location.reload();
     }
 }
 
 window.onbeforeunload = function() {
-    if (itemsInCartAmmount != 0) {
+    if (itemsInCartAmmount != 0 && !isOrder) {
         return "Data will be lost if you leave the page, are you sure?";
     }
 };
