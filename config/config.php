@@ -1,8 +1,8 @@
 <?php
 
-define('URI_HOME', '/dofi-test/home');
-define('URI_SHOP', '/dofi-test/shop');
-define('URI_CONTACT', '/dofi-test/contact');
+define('URI_HOME', '/home');
+define('URI_SHOP', '/shop');
+define('URI_CONTACT', '/contact');
 
 
 /**
