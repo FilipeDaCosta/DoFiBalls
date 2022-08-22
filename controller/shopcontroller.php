@@ -18,7 +18,7 @@ foreach ($articles as $article) {
     echo '</div>';
     echo '<div class="product-info">';
     echo "<h2 class='product-brand'>$description</h2>";
-    echo "<p class='product-short-description' id='article$id'>Available Ammount: $ammount</p>";
+    echo "<p class='product-short-description' id='article$id'>Available Amount: $ammount</p>";
     echo '</div>';
     echo '</div>';
 }
