@@ -1,15 +1,11 @@
 let boxes = [];
 let articles = [];
 
-// window.onload = function () {
-//     if (localStorage.getItem("articles") === null && localStorage.getItem("boxes") === null){
-//         boxes = getData("http://rest.sa/getAllBoxes.php");
-//         articles = getData("http://rest.sa/getAllArticles.php");
-//         createArticles();
-//         createBoxes();
-//     }
-// }
-
+/**
+ * Gets data from the API
+ * @param url   The URL to the API
+ * @returns {*[]}   the data, parsed to a JSON string.
+ */
 function getData(url) {
     let pos = [];
     let request = new XMLHttpRequest();
@@ -26,13 +22,18 @@ function getData(url) {
     return pos;
 }
 
+/**
+ * creates the articles
+ */
 function createArticles() {
     articles.forEach((article) => {
         new Article(article.article_id, article.description, article.color_id);
     });
-    console.log(Article.articleList);
 }
 
+/**
+ * created the boxes
+ */
 function createBoxes() {
     let newbox;
     boxes.forEach((box) => {
@@ -48,5 +49,4 @@ function createBoxes() {
             });
         }
     });
-    console.log(Box.boxList);
 }

@@ -1,5 +1,7 @@
 <?php
-
+/** Represents an Order.
+ * @author Dominik Bolliger
+ */
 class Order
 {
     private int $orderId;

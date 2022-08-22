@@ -1,5 +1,8 @@
 <?php
 
+/**
+ * the Url constatns
+ */
 define('URI_HOME', '/home');
 define('URI_SHOP', '/shop');
 define('URI_CONTACT', '/contact');

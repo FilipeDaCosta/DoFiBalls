@@ -1,5 +1,8 @@
 <?php
 
+/** Represents an Box.
+ * @author Dominik Bolliger
+ */
 class Box
 {
     private int $boxId;

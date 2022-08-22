@@ -7,7 +7,11 @@ let itemsInCart = [{id: 1, ball: "Red Ball", ammount: 0, available: 0},
 let itemsInCartAmmount = 0;
 let isOrder = false;
 
-
+/**
+ * Adds the ordered items to the itemsInCart variable and updates all counters.
+ * @param id        The article ID
+ * @param available the available ammount of the article
+ */
 function addToCart(id, available) {
     let cartCount = document.getElementById("cart-counter");
     switch (id) {
@@ -60,6 +64,9 @@ function addToCart(id, available) {
     addItemsToCart();
 }
 
+/**
+ * For every ordered article ID an elemnt gets created in the cart list.
+ */
 function addItemsToCart() {
     let cartDiv = document.getElementById("cart-div");
     cartDiv.innerHTML = "";
@@ -77,6 +84,11 @@ function addItemsToCart() {
     cartDiv.innerHTML += "<button id='order-button' type='button' onclick='order()'>Order</button>"
 }
 
+/**
+ * Changes to ammount of an article which is already oredere an in the cart
+ * @param option    The option(plus or minus)
+ * @param itemId    The item ID
+ */
 function changeItemAmmount(option, itemId) {
     if (option === 0) {
         itemsInCart.forEach((item) => {
@@ -102,6 +114,9 @@ function changeItemAmmount(option, itemId) {
     removeOrderButton();
 }
 
+/**
+ * This function removes the order button when there are no items in the cart
+ */
 function removeOrderButton() {
     let $itemsInCartAmmount = 0;
     itemsInCart.forEach((item) => {
@@ -113,6 +128,10 @@ function removeOrderButton() {
     }
 }
 
+/**
+ * Deletes an item from the cart
+ * @param itemId
+ */
 function deleteItem(itemId) {
     itemsInCart.forEach((item) => {
         if (item.id == itemId) {
@@ -123,6 +142,9 @@ function deleteItem(itemId) {
     removeOrderButton();
 }
 
+/**
+ * Function to hide and show the item Cart
+ */
 function showCart() {
     let footer = document.getElementById("footer");
     let header = document.getElementById("header")
@@ -145,6 +167,10 @@ function showCart() {
     }
 }
 
+/**
+ * When the customer finished his order and clicked the order button, hes has to confirm the order.
+ * If he confirms it, the order gets send to the API.
+ */
 function order() {
     let itemsInCartAmmount = 0;
     let confirmMessage = "";
@@ -171,6 +197,10 @@ function order() {
     }
 }
 
+/**
+ * Checks if there is something in the cart and if so, warns the user bfeore refreshing.
+ * @returns {string}
+ */
 window.onbeforeunload = function() {
     if (itemsInCartAmmount != 0 && !isOrder) {
         return "Data will be lost if you leave the page, are you sure?";
