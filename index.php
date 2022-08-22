@@ -13,9 +13,6 @@ include_once 'config/config.php';
     <link rel="stylesheet" type="text/css" href="css/style.css"/>
     <link rel="stylesheet" type="text/css" href="css/slider.css"/>
     <!--JS-->
-    <script type="text/javascript" src="js/getDataFromRest.js"></script>
-    <script type="text/javascript" src="js/Box.js"></script>
-    <script type="text/javascript" src="js/Article.js"></script>
     <script type="text/javascript" src="js/cart.js"></script>
     <!--Font-->
     <link rel="preconnect" href="https://fonts.googleapis.com"/>

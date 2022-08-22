@@ -85,7 +85,7 @@ function addItemsToCart() {
 }
 
 /**
- * Changes to ammount of an article which is already oredere an in the cart
+ * Changes to ammount of an article which is already oredered and in the cart
  * @param option    The option(plus or minus)
  * @param itemId    The item ID
  */
