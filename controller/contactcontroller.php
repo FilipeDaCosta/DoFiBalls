@@ -1,5 +1,9 @@
 <?php
 
+/**
+ * Controller for the Contact Page.
+ */
+
 echo '<div id="contact-div">';
 echo '<div id="map">';
 echo '<iframe 

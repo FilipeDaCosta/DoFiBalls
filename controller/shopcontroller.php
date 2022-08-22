@@ -1,6 +1,6 @@
 <?php
 /**
- * Creates the Shop page with the articles. Its mandatory that the Datacontroller ran before.
+ * Creates the Shop page with the articles. Its mandatory that the Datacontroller ran before this.
  */
 $articles = Article::getArticleList();
 

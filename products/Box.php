@@ -1,6 +1,5 @@
 <?php
-
-/** Represents an Box.
+/** Represents a Box.
  * @author Dominik Bolliger
  */
 class Box
