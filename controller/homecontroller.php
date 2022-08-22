@@ -1,5 +1,9 @@
 <?php
 
+/**
+ * Controller for the Home page.
+ */
+
 echo    "<div id='hometext'>";
 echo        "<h2>Hi! We are Dominik.</h2>";
 echo        "<p>At DoFi Balls, we want to bring our balls to all of you. We have a selected range of coloured balls which we have been using since the beginning. In 2022, we had the idea to make them available for everyone.</p>";

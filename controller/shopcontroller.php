@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * Creates the Shop page with the articles. Its mandatory that the Datacontroller ran before this.
+ */
 $articles = Article::getArticleList();
 
 echo '<section class="product">';
@@ -18,7 +20,7 @@ foreach ($articles as $article) {
     echo '</div>';
     echo '<div class="product-info">';
     echo "<h2 class='product-brand'>$description</h2>";
-    echo "<p class='product-short-description' id='article$id'>Available Ammount: $ammount</p>";
+    echo "<p class='product-short-description' id='article$id'>Available Amount: $ammount</p>";
     echo '</div>';
     echo '</div>';
 }

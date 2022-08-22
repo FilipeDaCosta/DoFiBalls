@@ -1,5 +1,7 @@
 <?php
-
+/** Represents an Article.
+ * @author Dominik Bolliger
+ */
 class Article
 {
     private int $articleId;
