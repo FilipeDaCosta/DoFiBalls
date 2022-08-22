@@ -1,4 +1,9 @@
 <?php
+
+/**
+ * The controller gets called everytime the customer clicks a link in the Nav Bar.
+ */
+
 switch (getCurrentURI()) {
     case URI_HOME:
         include_once 'controller/homecontroller.php';

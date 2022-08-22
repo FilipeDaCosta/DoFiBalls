@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * Creates the Shop page with the articles. Its mandatory that the Datacontroller ran before.
+ */
 $articles = Article::getArticleList();
 
 echo '<section class="product">';

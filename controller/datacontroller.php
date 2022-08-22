@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * The Data Controller gets Data from the API and creates the Article and Box Objects.
+ */
 include_once 'products/Box.php';
 include_once 'products/Article.php';
 
@@ -15,10 +17,16 @@ $allBoxes = json_decode($allBoxes);
 $allArticles = file_get_contents('http://az-srv01-mysql-api.switzerlandnorth.cloudapp.azure.com/getAllArticles.php');
 $allArticles = json_decode($allArticles);
 
+/**
+ * Article Objects are created here
+ */
 foreach ($allArticles as $article){
     new Article($article->article_id, $article->description, $article->color_id, $article->src);
 }
 
+/**
+ * Box Objects are created here and are stored inside an Array for later use.
+ */
 foreach ($allBoxes as $box){
     if(is_null($box->order_id)){
         $box->order_id = 0;
@@ -43,6 +51,9 @@ foreach ($allBoxes as $box){
     }
 }
 
+/**
+ * All Boxes are going to be assigned to an article
+ */
 foreach (Article::getArticleList() as $article){
     switch ($article->getArticleId()){
         case 1:
