@@ -20,6 +20,7 @@ foreach ($allArticles as $article){
 }
 
 foreach ($allBoxes as $box){
+    var_dump($box);
     if(is_null($box->order_id)){
         $box->order_id = 0;
         $newBox = new Box($box->box_id, $box->box_pos_x, $box->box_pos_y, $box->box_pos_z, $box->article_id, $box->order_id);
