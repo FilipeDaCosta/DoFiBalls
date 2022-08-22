@@ -1,9 +1,9 @@
 let productContainers = [...document.querySelectorAll('.product-container')];
-const nxtBtn = [...document.querySelectorAll('.nxt-btn')];
-const preBtn = [...document.querySelectorAll('.pre-btn')];
+let nxtBtn = [...document.querySelectorAll('.nxt-btn')];
+let preBtn = [...document.querySelectorAll('.pre-btn')];
 
 /**
- * slides the Articles to the left or to the right
+ * slides the Articles to the left or to the right.
  */
 productContainers.forEach((item, i) => {
     let containerDimensions = item.getBoundingClientRect();
